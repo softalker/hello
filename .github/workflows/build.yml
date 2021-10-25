@@ -11,7 +11,8 @@ jobs:
           cache: maven
       - run: |
           mvn --update-snapshots --batch-mode install
-          mvn exec:java -Dexec.mainClass="world.Hello"
         env:
           GITHUB_TOKEN: ${{secrets.MAVEN}}
+      - run: |
+          mvn exec:java -Dexec.mainClass="world.Hello"
 
