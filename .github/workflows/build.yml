@@ -9,7 +9,7 @@ jobs:
           distribution: temurin
           java-version: 8
           cache: maven
-      - run: mvn exec:java world.Hello
+      - run: mvn exec:java -Dexec.mainClass="world.Hello"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
