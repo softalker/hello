@@ -54,4 +54,30 @@
 
 	</dependencies>
 
+	<profiles>
+   		<profile>
+     		<id>skipInstall</id>
+     		<activation>
+       			<property>
+		        	<name>deployOnly</name>
+         			<value>true</value>
+       			</property>
+     		</activation>
+     		<build>
+       			<pluginManagement>
+         			<plugins>
+           				<plugin>
+             					<groupId>org.apache.maven.plugins</groupId>
+             					<artifactId>maven-install-plugin</artifactId>
+             					<executions>
+               						<execution>
+                 						<id>default-install</id>
+                 						<phase>none</phase>
+               						</execution>
+             					</executions>
+           				</plugin>
+         			</plugins>
+       			</pluginManagement>
+     		</build>
+   	</profile>
 </project>
