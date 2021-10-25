@@ -14,5 +14,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{secrets.MAVEN}}
       - run: |
-          mvn exec:java -Dexec.mainClass="world.Hello"
+          mvn --batch-mode exec:java -Dexec.mainClass="world.Hello"
 
