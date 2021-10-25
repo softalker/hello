@@ -12,5 +12,5 @@ jobs:
       #- run: mvn --update-snapshots --batch-mode -e -X exec:java -Dexec.mainClass="world.Hello"
       - run: mvn --update-snapshots --batch-mode -e package
         env:
-          GITHUB_TOKEN: ABCD
+          GITHUB_TOKEN: ${{secrets.MAVEN}}
 
