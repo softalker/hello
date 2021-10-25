@@ -10,9 +10,13 @@ jobs:
           java-version: 8
           cache: maven
       - run: |
-          mvn --update-snapshots --batch-mode install
+          mvn --batch-mode --update-snapshots install
         env:
           GITHUB_TOKEN: ${{secrets.MAVEN}}
+      - run: |
+          mvn --batch-mode deploy
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
       - run: |
           mvn --batch-mode exec:java -Dexec.mainClass="world.Hello"
 
