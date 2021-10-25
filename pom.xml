@@ -11,7 +11,7 @@
 	<repositories>
 	   	<repository>
      			<id>github</id>
-     			<url>https://maven.pkg.github.com/softalks/world</url>
+     			<url>https://maven.pkg.github.com/softalks/*</url>
    		</repository>
 	</repositories>
 
