@@ -1,0 +1,9 @@
+<resource_type xmlns="http://wadl.dev.java.net/2009/02">
+  <method name="GET">
+    <request>
+      <param style="header" name="Accept-Language" default="en">
+        <option value="es"/>
+      </param>
+    </request>
+  </method>
+</resource_type>
