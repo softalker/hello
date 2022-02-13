@@ -4,19 +4,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-java@v2
-        with:
-          distribution: temurin
-          java-version: 8
-          cache: maven
       - run: |
-          mvn --batch-mode --update-snapshots install
-        env:
-          GITHUB_TOKEN: ${{secrets.MAVEN}}
-      - run: |
-          mvn --batch-mode -DdeployOnly=true deploy
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - run: |
-          mvn --batch-mode exec:java -Dexec.mainClass="world.Hello"
+          echo "Hello, World!"
 
