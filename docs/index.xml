@@ -5,5 +5,8 @@
         <option value="es"/>
       </param>
     </request>
+    <response status="200">
+      
+    </response>
   </method>
 </resource_type>
